@@ -17,3 +17,9 @@
 @include bg-variant('.bg-danger', $brand-danger);
 
 @include bg-variant('.bg-inverse', $brand-inverse);
+
+@include bg-variant('.pass-danger', $pass-danger);
+
+@include bg-variant('.pass-success', $pass-success);
+
+@include bg-variant('.pass-warning', $pass-warning);

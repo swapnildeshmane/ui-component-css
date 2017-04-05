@@ -15,6 +15,32 @@ html {
           box-sizing: inherit;
 }
 
+/*change end*/
+/**/
+/*sans-serif;*/
+/**/
+/*added 1 line, font Xtra Small */
+/*extra small for dropdown purpose*/
+/*New created 1 line*/
+/*change 2 lines*/
+/*change 3 line*/
+/*
+$btn-padding-x-sm:               .5rem !default;
+$btn-padding-y-sm:               .25rem !default;
+*/
+/*$btn-padding-x-lg:               1.5rem !default;
+$btn-padding-y-lg:               .75rem !default;
+*/
+/*add new line 1*/
+/*new added 1 line*/
+/*added 2 line*/
+/*added new var, for white background*/
+/*added 1 line*/
+/*
+$sidebar-min- ... = sidebar minimized
+$sidebar-exp- ... = sidebar expanded
+$sidebar- ... = to both (minimized and expanded)
+*/
 .container {
   position: relative;
   margin-left: auto;

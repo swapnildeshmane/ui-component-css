@@ -53,7 +53,10 @@
   background-color: $modal-content-bg;
   background-clip: padding-box;
   border: $modal-content-border-width solid $modal-content-border-color;
-  @include border-radius($border-radius-lg);
+  
+  //@include border-radius($border-radius-lg);                                /*Changed 1 line*/
+  @include border-radius(0.25rem);
+  
   @include box-shadow($modal-content-xs-box-shadow);
   // Remove focus outline from opened modal
   outline: 0;
@@ -77,10 +80,13 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
+  
+  background-color: $modal-hdr-bg;
+
   display: flex;
   align-items: center; // vertically center it
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
-  padding: $modal-header-padding;
+  padding: 0.9375rem 0.875rem 0.9375rem 1.25rem;                              /*change 1 line*/
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
 }
 
@@ -88,6 +94,8 @@
 .modal-title {
   margin-bottom: 0;
   line-height: $modal-title-line-height;
+  font-family: $f-f-S-S-Pro;
+  font-weight: 600;
 }
 
 // Modal body
@@ -97,7 +105,10 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: $modal-inner-padding;
+  padding: 0.625rem 1.25rem;
+  font-family: $f-f-S-S-Pro;
+  font-weight: 400;
+  font-size: 0.75rem;
 }
 
 // Footer (for actions)
@@ -105,12 +116,12 @@
   display: flex;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding;
+  padding: $modal-inner-padding-y $modal-inner-padding-x;
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
 
   // Easily place margin between footer elements
-  > :not(:first-child) { margin-left: .25rem; }
-  > :not(:last-child) { margin-right: .25rem; }
+  > :not(:first-child) { margin-left: 0.3125rem; }                            /*changed 2 lines*/
+  > :not(:last-child) { margin-right: 0.3125rem; }
 }
 
 // Measure scrollbar width for padding body during modal show/hide

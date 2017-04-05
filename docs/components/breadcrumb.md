@@ -7,6 +7,8 @@ group: components
 
 Indicate the current page's location within a navigational hierarchy. Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
 
+## YM Required
+
 {% example html %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item active">Home</li>
@@ -21,6 +23,8 @@ Indicate the current page's location within a navigational hierarchy. Separators
   <li class="breadcrumb-item active">Data</li>
 </ol>
 {% endexample %}
+
+## Extra
 
 Similar to our navigation components, breadcrumbs work fine with or without the usage of list markup.
 

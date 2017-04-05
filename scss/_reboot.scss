@@ -47,7 +47,8 @@ html {
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
+  //font-family: $font-family-base;
+  font-family: 'Times New Roman', Times, serif;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
@@ -181,17 +182,17 @@ sup { top: -.5em; }
 // Links
 //
 
-a {
-  color: $link-color;
-  text-decoration: $link-decoration;
-  background-color: transparent; // Remove the gray background on active links in IE 10.
-  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+//a {
+  //color: $link-color;
+  //text-decoration: $link-decoration;
+ // background-color: transparent; // Remove the gray background on active links in IE 10.
+  //-webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
-  @include hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-}
+//  @include hover {
+//    color: $link-hover-color;
+//    text-decoration: $link-hover-decoration;
+//  }
+//}
 
 // And undo these styles for placeholder links/named anchors (without href)
 // which have not been made explicitly keyboard-focusable (without tabindex).
@@ -330,7 +331,8 @@ select,
 optgroup,
 textarea {
   margin: 0; // Remove the margin in Firefox and Safari
-  font-family: inherit;
+  //font-family: "Source Sans Pro";
+  font-family: $f-f-S-S-Pro;
   font-size: inherit;
   line-height: inherit;
 }

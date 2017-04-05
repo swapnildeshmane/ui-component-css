@@ -3,12 +3,28 @@
   margin-bottom: $spacer-y;
   list-style: none;
   background-color: $breadcrumb-bg;
-  @include border-radius($border-radius);
+
+  font-size : $breadcrumb-font-size;                                  /*added 1 line*/
+
+  a{
+    //color: $YuktaBlue;                        /*added new function*/
+    font-family: $f-f-S-S-Pro;
+    text-decoration: none;
+  }
+
+  //@include border-radius($border-radius);               /*change 1 line*/
+  @include border-radius(0.25rem);
   @include clearfix;
 }
 
 .breadcrumb-item {
   float: left;
+
+  a{                                            /*added new style for 'a'*/
+    color: $YuktaBlue;
+    font-family: $f-f-S-S-Pro;
+    text-decoration: none;
+  }
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item::before {
@@ -26,7 +42,7 @@
   // To trick IE into suppressing the underline, we give the pseudo-element an
   // underline and then immediately remove it.
   + .breadcrumb-item:hover::before {
-    text-decoration: underline;
+    text-decoration: none;
   }
   + .breadcrumb-item:hover::before {
     text-decoration: none;

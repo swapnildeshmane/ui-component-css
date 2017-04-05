@@ -87,6 +87,32 @@ Place any checkbox or radio option within an input group's addon instead of text
 </div>
 {% endexample %}
 
+## Checkboxes and radio addons (YM required)
+
+Place any checkbox or radio option within an input group's addon instead of text.
+
+{% example html %}
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span>
+        <span class="fa fa-check" style="color:#1FB6FF; padding:1px; border: 1px solid #1FB6FF;"> </span>
+        <label class="input-group-label">Option</label>
+      </span>
+      
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span>
+        <span class="fa fa-circle" style="color:#1FB6FF; padding:2px; border: 1px solid #1FB6FF; border-radius:12px;"> </span>
+        <label class="input-group-label">Option</label>
+      </span>
+    </div>
+  </div>
+</div>
+{% endexample %}
+
 ## Multiple addons
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
@@ -113,7 +139,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {% endexample %}
 
 
-## Button addons
+## Button addons (YM required)
 
 Buttons in input groups must wrapped in a `.input-group-btn` for proper alignment and sizing. This is required due to default browser styles that cannot be overridden.
 
@@ -129,11 +155,11 @@ Buttons in input groups must wrapped in a `.input-group-btn` for proper alignmen
   </div>
   <div class="col-lg-6">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control sch_cr" placeholder="Search for...">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
+        <button class="btn btn-secondary-silver" type="button">Go!</button>
       </span>
-    </div>
+    </div> 
   </div>
 </div>
 <br>

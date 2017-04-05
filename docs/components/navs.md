@@ -4,7 +4,7 @@ title: Navs
 description: Documentation and examples for how to use Bootstrap's included navigation components.
 group: components
 ---
-
+ 
 Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 ## Contents
@@ -48,7 +48,51 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 
 Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own.
 
-### Horizontal alignment
+### Horizontal Left alignment (YM Required)
+
+As per requirement from YuktaMedia, horizontal aligment navigation is designed here
+
+Centered with `.justify-content-center`:
+
+{% example html %}
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+{% endexample %}
+
+### Horizontal Right alignment (YM Required)
+
+Right-aligned with `.justify-content-end`:
+
+{% example html %}
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+{% endexample %}
+
+### Horizontal Central alignment
 
 Change the horizontal alignment of your nav with [flexbox utilities]({{ site.baseurl }}/layout/grid/#horizontal-alignment). By default, navs are left-aligned, but you can easily change them to center or right aligned.
 

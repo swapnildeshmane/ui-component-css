@@ -1,0 +1,50 @@
+.list-group {
+    max-width: 13.75rem;
+}
+
+.list-group-item { 
+    border: none;
+    background-color: $ExtraDarkSnow;
+    color: $Silver;
+    padding: 0.5rem 1.5625rem 0.5rem 1.5625rem;
+
+    &:first-child {
+        padding-top: 1.25rem;
+    }
+
+    &:last-child {
+        padding-bottom: 1.875rem;
+    }
+}
+
+.list-group-subitem { 
+    border: none;
+    background-color: $ExtraDarkSnow;
+    color: $Silver;
+    padding: 0.5rem 1.5625rem 0.5rem 1.5625rem;
+
+    &:first-child {
+        padding-top: 0.9375rem;
+    }
+
+    &:last-child {
+        padding-bottom: 0.9375rem;
+    }
+
+}
+
+.inner-list {
+    background-color: $ExtraDarkSnow;
+    list-style : none;
+}
+
+.list-group-menus { 
+    border: none;
+    background-color: $ExtraDarkSnow;
+    color: $Silver;
+    padding: 0 1.5625rem 1rem 1.5625rem;
+}
+
+.menus {
+    padding-left: 0.9375rem;
+}

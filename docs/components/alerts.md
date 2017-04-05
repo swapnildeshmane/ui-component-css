@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: Alerts
-description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 group: components
 ---
 
@@ -16,18 +15,20 @@ Provide contextual feedback messages for typical user actions with the handful o
 
 Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
 
+### YM required
+
 {% example html %}
 <div class="alert alert-success" role="alert">
-  <strong>Well done!</strong> You successfully read this important alert message.
+  Well done! You successfully read this important alert message.
 </div>
 <div class="alert alert-info" role="alert">
-  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</div>
-<div class="alert alert-warning" role="alert">
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  Heads up! This alert needs your attention, but it's not super important.
 </div>
 <div class="alert alert-danger" role="alert">
-  <strong>Oh snap!</strong> Change a few things up and try submitting again.
+  Oh snap! Change a few things up and try submitting again.
+</div>
+<div class="alert alert-warning" role="alert">
+  Warning! Better check yourself, you're not looking too good.
 </div>
 {% endexample %}
 
@@ -55,14 +56,13 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 
 ### Additional content
 
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+Alerts can also contain additional HTML elements like headings and paragraphs.
 
 {% example html %}
 <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Well done!</h4>
   <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <p class="m-b-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 </div>
 {% endexample %}
 
@@ -74,12 +74,12 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 - Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
 - Add a dismiss button and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the `.close` button.
 - On the dismiss button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
+- To animate alerts when dismissing them, be sure to add the `.fade` and `.in` classes.
 
 You can see this in action with a live demo:
 
 {% example html %}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="alert alert-warning alert-dismissible fade in" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -112,7 +112,7 @@ Note that closing an alert will remove it from the DOM.
 | Method | Description |
 | --- | --- |
 | `$().alert()` | Makes an alert listen for click events on descendant elements which have the `data-dismiss="alert"` attribute. (Not necessary when using the data-api's auto-initialization.) |
-| `$().alert('close')` | Closes an alert by removing it from the DOM. If the `.fade` and `.show` classes are present on the element, the alert will fade out before it is removed. |
+| `$().alert('close')` | Closes an alert by removing it from the DOM. If the `.fade` and `.in` classes are present on the element, the alert will fade out before it is removed. |
 
 {% highlight js %}$(".alert").alert('close'){% endhighlight %}
 

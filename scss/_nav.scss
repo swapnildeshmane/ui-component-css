@@ -13,10 +13,18 @@
 
 .nav-link {
   display: block;
+  font-family: $f-f-S-S-Pro;
   padding: $nav-link-padding;
+  color: $Silver;
+
+  text-decoration: none;
 
   @include hover-focus {
     text-decoration: none;
+    padding-bottom: 0.4375rem;          /*added 3 lines*/
+    border-bottom: 1px solid $YuktaBlue;
+    color: $YuktaBlue;
+    font-weight: 600;
   }
 
   // Disabled state lightens text and removes hover/tab effects
@@ -25,7 +33,6 @@
     cursor: $cursor-disabled;
   }
 }
-
 
 //
 // Tabs
@@ -36,6 +43,8 @@
 
   .nav-item {
     margin-bottom: -$nav-tabs-border-width;
+
+
   }
 
   .nav-link {
@@ -58,6 +67,7 @@
     color: $nav-tabs-active-link-hover-color;
     background-color: $nav-tabs-active-link-hover-bg;
     border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-bg;
+
   }
 
   .dropdown-menu {

@@ -165,7 +165,68 @@ Below is a complete list of the specific form controls supported by Bootstrap an
   </tbody>
 </table>
 
-### Textual inputs
+### Textual inputs (YM required)
+
+Textboxes as required in the pdf.
+
+{% example html %}
+<div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Text</label>
+  <div class="col-10">
+    <input class="form-control form-control-text" type="text" value="" id="example-text-input" placeholder="text">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-2 col-form-label">Diabled</label>
+  <div class="col-10">
+    <input class="form-control disabled" type="text" value="" placeholder="disabled" id="example-search-input" disabled>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-2 col-form-label"> Error </label>
+  <div class="col-10">
+    <input class="form-control form-control-error" type="text" value="" value="invalid i/p" id="example-search-input" >
+    <label class="err-msg">Error </label>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-2 col-form-label"> Success </label>
+  <div class="col-10">
+    <input class="form-control form-control-success" type="text" value="" value="success i/p" id="example-search-input" >
+    <label class="succ-msg">success </label>
+  </div>
+</div>
+{% endexample %}
+
+### Textual inputs with label (YM required)
+
+Textboxes with labels.
+{% example html %}
+<div class="form-group has-empty">
+  <label class="form-control-label" for="inputDanger1">Input with Label</label>
+  <input type="text" class="form-control form-control-text" id="inputSuccess1" value="text">
+</div>
+
+<div class="form-group has-disabled">
+  <label class="form-control-label" for="inputDanger1">Disabled Input</label>
+  <input type="text" class="form-control disabled" id="inputDanger1" value="disabled textboxes" disabled>
+  <div class="form-control-feedback"></div>
+</div>
+
+<div class="form-group has-success">
+  <label class="form-control-label" for="inputSuccess1">Input with success</label>
+  <input type="text" class="form-control form-control-success" id="inputSuccess1">
+  <div class="form-control-feedback">Success message.</div>
+</div>
+
+<div class="form-group has-danger">
+  <label class="form-control-label" for="inputWarning1">Input with error</label>
+  <input type="text" class="form-control form-control-error" id="inputWarning1">
+  <div class="form-control-feedback">Error message.</div>
+</div>
+{% endexample %}
+
+## Textual inputs
 
 Here are examples of `.form-control` applied to each textual HTML5 `<input>` `type`.
 
@@ -420,14 +481,14 @@ Default checkboxes and radios are improved upon with the help of `.form-check`, 
 
 Disabled checkboxes and radios are supported, but to provide a `not-allowed` cursor on hover of the parent `<label>`, you'll need to add the `.disabled` class to the parent `.form-check`. The disabled class will also lighten the text color to help indicate the input's state.
 
-### Default (stacked)
+### Default (stacked) (YM required)
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
 
 {% example html %}
 <div class="form-check">
   <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" value="">
+    <input class="form-check-input" type="checkbox" value="" checked>
     Option one is this and that&mdash;be sure to include why it's great
   </label>
 </div>
@@ -971,4 +1032,4 @@ $custom-file-text: (
 );
 {% endhighlight %}
 
-You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
+You'll need to set the language of your document (or subtree thereof) successly in order for the success text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.

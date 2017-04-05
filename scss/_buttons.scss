@@ -9,6 +9,7 @@
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   text-align: center;
+  margin: 0.25rem;                           /*added 1 line*/
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
@@ -54,10 +55,30 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  
 }
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+    @include hover-focus {
+      background-color: darken($Green, 12%);
+      border-color: darken($Green, 12%);
+      color: $white;
+    }
+  
 }
+
+.btn-secondary-silver {
+  @include button-variant($btn-secondary-silver-color, $btn-secondary-silver-bg, $btn-secondary-silver-border);
+
+    @include hover-focus {
+      background-color: $Silver;
+      border-color: $Silver;
+      color: $white;
+    }
+  
+}
+
 .btn-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
@@ -69,6 +90,28 @@ fieldset[disabled] a.btn {
 }
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-largestandardbtnicon {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+      @include hover-focus {
+      background-color: darken($Green, 12%);
+      border-color: darken($Green, 12%);
+      color: $white;
+    }
+
+}
+
+.btn-largesplitbtn {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+      @include hover-focus {
+      background-color: darken($Green, 12%);
+      border-color: darken($Green, 12%);
+      color: $white;
+    }
+
 }
 
 // Remove all backgrounds

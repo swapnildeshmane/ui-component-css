@@ -1,0 +1,44 @@
+.lbl {
+  font-family: $f-f-S-S-Pro;
+  font-size: $label-font-size;
+  color: $label-font-color;
+  border-radius: $label-border-radius;
+  padding: $label-padding;
+  font-weight: bold;
+}
+
+.lbl-red {
+  background-color: $Red;
+}
+
+
+.lbl-green {
+  background-color: $Green;
+}
+
+.lbl-blue {
+  background-color: $YuktaBlue;
+}
+
+
+.lbl-yellow {
+  background-color: $Yellow;
+}
+
+.lbl-orange {
+  background-color: $Orange;
+}
+
+
+.lbl-pink {
+  background-color: $Pink;
+}
+
+.lbl-gray {
+  background-color: $ExtraDarkSmoke;
+}
+
+
+.lbl-violet {
+  background-color: blueviolet;
+}

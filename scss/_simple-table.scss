@@ -1,0 +1,87 @@
+.tbl {
+//    width: 100%;
+    border: none;
+    border-top: $st-border-width solid $st-border-color;
+    border-bottom: $st-border-width solid $st-border-color;
+    font-family: $f-f-S-S-Pro;
+}
+
+.tbl-head {
+    font-size: $st-font-size;
+    color: $st-font-color;
+    height: $st-head-height;
+    padding: 0 0.625rem;
+    font-weight: 600;
+}
+
+.tbl-body {
+    border-top: $st-border-width solid $st-border-color;
+    border-bottom: $st-border-width solid $st-border-color;
+}    
+
+.tbl-data {
+    font-size: $st-font-size;
+    color: $st-font-color;
+    height: $st-data-height;
+    padding: 0 0.625rem;
+//    width: 15%;
+    
+}
+
+.td-num {
+    text-align: right;
+    font-size: $st-font-size;
+    color: $st-font-color;
+    padding: 0 0.625rem;
+
+}
+
+.labels {                                   //overriding the previous css property//
+    margin-bottom: 0;
+}
+.td-label {
+    padding: 0 0.625rem;
+}
+
+.pagination {
+    float: right;
+    margin: 0.5rem 0.5rem 0 0;
+}
+
+.tbl-body:nth:child(3) {
+    text-align: right;
+}
+
+.tbl-body:nth:child(4) {
+    text-align: center;
+}
+
+.d-icon {                                      /*style for drilldown icon */
+    color: $YuktaBlue;
+    border: 1px solid $YuktaBlue;
+    border-radius: 12px;
+    padding: 1px 3px;
+}
+
+.drill-level1 {                               /*drill down level 1*/
+    border-top: $st-border-width solid $st-border-color;
+    border-bottom: $st-border-width solid $st-border-color;
+    background-color: rgba(31,182,255,0.15);
+
+    :nth-child(2) {
+        padding-left: 0;
+    }
+}    
+
+.drill-level2 {                               /*drill down level 1*/
+    border-top: $st-border-width solid $st-border-color;
+    border-bottom: $st-border-width solid $st-border-color;
+//    background-color: rgba(31,182,255,0.15);
+
+}    
+
+@media screen and (max-width: 360px) {                /*added 1 new function*/  /*for responsiveness*/
+    .pagination {
+        margin-right: 0.25rem;
+    }
+}

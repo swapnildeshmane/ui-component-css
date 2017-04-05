@@ -400,6 +400,114 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 </div>
 {% endhighlight %}
 
+
+## YM - From req Dropup variation
+
+Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
+
+<div class="bd-example">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group ml-2">
+      <button type="button" class="btn btn-secondary-silver new_brdr">Large split button</button>
+      <button type="button" class="btn btn-secondary-silver new_brdr dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"> first </a>
+        <a class="dropdown-item" href="#"> second </a>
+        <a class="dropdown-item" href="#"> third </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">eleven </a>
+      </div>
+    </div><!-- /btn-group -->
+
+  </div><!-- /btn-toolbar -->
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group ml-2">
+      <button type="button" class="btn btn-sm btn-secondary-silver new_brdr ">Small split button</button>
+      <button type="button" class="btn btn-sm btn-secondary-silver new_brdr dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"> first </a>
+        <a class="dropdown-item" href="#"> second </a>
+        <a class="dropdown-item" href="#"> third </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">eleven </a>
+      </div>
+    </div><!-- /btn-group -->
+  </div><!-- /btn-toolbar -->
+</div><!-- /example -->
+
+{% highlight html %}
+<!-- Large button groups (default and split) -->
+<div class="btn-group">
+  <button class="btn btn-secondary-silver btn-lg dropdown-toggle new_brdr" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Large button
+  </button>
+  <button type="button" class="btn btn-lg btn-secondary-silver dropdown-toggle dropdown-toggle-split new_brdr new_brdr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+
+<!-- Small button groups (default and split) -->
+<div class="btn-group">
+  <button class="btn btn-secondary-silver btn-sm dropdown-toggle new_brdr" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Small button
+  </button>
+  <button type="button" class="btn btn-sm btn-secondary-silver dropdown-toggle dropdown-toggle-split new_brdr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+{% endhighlight %}
+
+## YM - Dropup with label
+
+Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
+
+<div class="bd-example">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group ml-2">
+      <button type="button" class="btn btn-secondary-silver new_brdr">Large split button</button>
+      <button type="button" class="btn btn-secondary-silver new_brdr dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"> first </a>
+        <a class="dropdown-item" href="#"> second </a>
+        <a class="dropdown-item" href="#"> third </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">eleven </a>
+      </div>
+    </div><!-- /btn-group -->
+
+  </div><!-- /btn-toolbar -->
+  
+</div><!-- /example -->
+
+{% highlight html %}
+<!-- Large button groups (default and split) -->
+<div class="btn-group">
+  <label class="dd_lb">Label </label>
+  <button class="btn btn-secondary-silver btn-lg dropdown-toggle new_brdr" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Large button
+  </button>
+  <button type="button" class="btn btn-lg btn-secondary-silver dropdown-toggle dropdown-toggle-split new_brdr new_brdr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    ...
+  </div>
+</div>
+
+{% endhighlight %}
+
 ## Menu items
 
 Historically dropdown menu contents *had* to be links, but that's no longer the case with v4. Now you can optionally use `<button>` elements in your dropdowns instead of just `<a>`s.

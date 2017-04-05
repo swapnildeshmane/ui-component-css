@@ -6,6 +6,7 @@
   position: relative;
   display: flex;
   width: 100%;
+  margin: 0.25rem 0;
 
   .form-control {
     // Ensure that the input is always above the *appended* addon button for
@@ -33,14 +34,17 @@
   align-items: center;
 
   &:not(:first-child):not(:last-child) {
+    //@include border-radius(2rem);                        /*change*/
     @include border-radius(0);
   }
-}
+} 
 
 .input-group-addon,
 .input-group-btn {
   white-space: nowrap;
   vertical-align: middle; // Match the inputs
+  //display: none;
+
 }
 
 
@@ -71,7 +75,8 @@
   font-size: $font-size-base; // Match inputs
   font-weight: $font-weight-normal;
   line-height: $input-line-height;
-  color: $input-color;
+  //color: $input-color;            /*change 1 line*/
+  color: $input-color-placeholder;
   text-align: center;
   background-color: $input-group-addon-bg;
   border: $input-btn-border-width solid $input-group-addon-border-color;
@@ -98,6 +103,24 @@
   // scss-lint:enable QualifyingElement
 }
 
+//  /*new created*/
+//  Input group label
+//
+.input-group-label{
+  margin: 0 0 0 0.625rem;
+  font-size: $font-size-base;
+  color: $Silver;
+  font-family: $f-f-S-S-Pro;
+
+  @include hover-focus {
+      border-color: $Slate;
+      color: $Slate;
+    }
+}
+
+.sch_cr{
+    border-radius: $border-radius;
+}
 
 //
 // Reset rounded corners

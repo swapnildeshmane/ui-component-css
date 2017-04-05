@@ -36,7 +36,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
 ## Examples
 
-### Modal components
+### Modal components (YM required)
 
 Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
@@ -47,15 +47,15 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
         <div class="modal-header">
           <h5 class="modal-title">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" class="fa fa-times"></span>
           </button>
         </div>
         <div class="modal-body">
           <p>Modal body text goes here.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-secondary"> Save </button>
         </div>
       </div>
     </div>
@@ -69,22 +69,22 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
       <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true" class="fa fa-times"></span>
         </button>
       </div>
       <div class="modal-body">
         <p>Modal body text goes here.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-secondary"> Save </button>
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-### Live demo
+### Live demo (YM required)
 
 Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
 
@@ -101,8 +101,8 @@ Toggle a working modal demo by clicking the button below. It will slide down and
         <p>Woohoo, you're reading this text in a modal!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-secondary"> Save </button>
       </div>
     </div>
   </div>
@@ -134,8 +134,8 @@ Toggle a working modal demo by clicking the button below. It will slide down and
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-secondary"> Save </button>
       </div>
     </div>
   </div>
@@ -420,7 +420,7 @@ Be sure to add `role="dialog"` and `aria-labelledby="..."`, referencing the moda
 
 Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) for more information.
 
-## Optional sizes
+## Optional sizes (YM required)
 
 Modals have two optional sizes, available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
 
@@ -436,7 +436,19 @@ Modals have two optional sizes, available via modifier classes to be placed on a
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      ...
+      <div class="modal-header">
+        <h4 class="modal-title" id="mySmallModalLabel">Large modal</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-lg btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-lg btn-secondary"> Save </button>
+      </div>
     </div>
   </div>
 </div>
@@ -447,7 +459,19 @@ Modals have two optional sizes, available via modifier classes to be placed on a
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      ...
+      <div class="modal-header">
+        <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-sm btn-secondary"> Save </button>
+      </div>
     </div>
   </div>
 </div>
@@ -456,7 +480,6 @@ Modals have two optional sizes, available via modifier classes to be placed on a
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-
       <div class="modal-header">
         <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -464,7 +487,11 @@ Modals have two optional sizes, available via modifier classes to be placed on a
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-secondary"> Save </button>
       </div>
     </div>
   </div>
@@ -480,7 +507,11 @@ Modals have two optional sizes, available via modifier classes to be placed on a
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary-silver" data-dismiss="modal"> Cancel </button>
+          <button type="button" class="btn btn-sm btn-secondary"> Save </button>
       </div>
     </div>
   </div>

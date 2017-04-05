@@ -17,12 +17,16 @@
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
   background-clip: padding-box;
-  border: $input-btn-border-width solid $input-border-color;
+  border: $input-btn-border-width solid $Silver;
+  //border: none;                                   /*change 2 lines*/
+  //border-bottom: $input-btn-border-width solid $Silver;
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @if $enable-rounded {
     // Manually use the if/else instead of the mixin to account for iOS override
-    border-radius: $input-border-radius;
+    //border-radius: $input-border-radius;       /*change 1 line*/
+    //border-radius: $input-border-radius-sm;     /*change 1 line*/
+    border-radius: 0;
   } @else {
     // Otherwise undo the iOS default
     border-radius: 0;
@@ -61,7 +65,55 @@
 
   &:disabled {
     cursor: $cursor-disabled;
+    border: none;
+    border-bottom: $input-btn-border-width dashed $Silver;
   }
+}
+
+.form-control-text {
+  border:none;
+  &:empty{
+    border-bottom: $input-btn-border-width solid $DarkSmoke;
+  }
+  &:hover {
+    border-bottom: $input-btn-border-width solid $Silver;
+  }
+  &:focus {
+    //border-bottom: $input-btn-border-width solid $YuktaBlue;
+    border-bottom: 2px solid $YuktaBlue;
+  }
+}
+
+.form-control-error {
+    border:none;
+    border-bottom: $input-btn-border-width solid $Red;
+  &:hover {
+    border-bottom: $input-btn-border-width solid $Silver;
+  }
+  &:focus {
+    border-bottom: $input-btn-border-width solid $Red;
+  }
+}
+
+.err-msg {
+    color: $Red;
+    font-family: $f-f-S-S-Pro;
+    font-size: 0.75rem;
+}
+
+.form-control-success {
+    border:none;
+    border-bottom: $input-btn-border-width solid $Green;
+  &:hover {
+    border-bottom: $input-btn-border-width solid $Silver;
+  }
+  &:focus {
+    border-bottom: $input-btn-border-width solid $Green;
+  }
+}
+
+.succ-msg {
+    color: $Green;
 }
 
 select.form-control {
@@ -188,6 +240,10 @@ select.form-control-lg {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+
+  &:hover {
+    color : $YuktaBlue;
+  }
 }
 
 .form-text {
@@ -216,6 +272,14 @@ select.form-control-lg {
 .form-check-label {
   padding-left: $form-check-input-gutter;
   margin-bottom: 0; // Override default `<label>` bottom margin
+
+  color: $Silver;               /*added new*/
+  font-family: $f-f-S-S-Pro;
+
+  @include hover-focus {        /*added new function*/
+    color: $Slate;
+  }
+
 }
 
 .form-check-input {
@@ -226,7 +290,12 @@ select.form-control-lg {
   &:only-child {
     position: static;
   }
+
 }
+
+  input:checked .form-check-label {
+    color: $Slate;
+  }
 
 // Radios and checkboxes on same line
 .form-check-inline {
@@ -261,11 +330,24 @@ select.form-control-lg {
 
 // Form validation states
 .has-success {
-  @include form-control-validation($brand-success);
+  //@include form-control-validation($brand-success);
+  @include form-control-validation($Green);
 
   .form-control-success {
-    background-image: $form-icon-success;
+//    background-image: $form-icon-success;
   }
+}
+
+.has-disabled {
+  //@include form-control-validation($brand-success);
+  @include form-control-validation($Silver);
+
+}
+
+.has-empty {
+  //@include form-control-validation($brand-success);
+  @include form-control-validation($YuktaBlue);
+
 }
 
 .has-warning {
@@ -280,10 +362,17 @@ select.form-control-lg {
   @include form-control-validation($brand-danger);
 
   .form-control-danger {
-    background-image: $form-icon-danger;
+    //background-image: $form-icon-danger;
   }
 }
 
+.has-error {
+  @include form-control-validation($Red);
+
+  .form-control-danger {
+    //background-image: $form-icon-danger;
+  }
+}
 
 // Inline forms
 //
@@ -385,3 +474,7 @@ select.form-control-lg {
     }
   }
 }
+
+
+// inputs with labels
+

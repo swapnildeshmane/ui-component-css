@@ -1,6 +1,6 @@
 .pagination {
   display: flex;
-  // 1-2: Disable browser default list styles
+  // 1-2: Disable browser default list styles 
   padding-left: 0; // 1
   list-style: none; // 2
   @include border-radius();
@@ -9,21 +9,25 @@
 .page-item {
   &:first-child {
     .page-link {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
+      margin-left: 0;                   /*changed 1 line*/
     }
   }
-  &:last-child {
+                    /*removed next code*/
+  /*&:last-child {
     .page-link {
       @include border-right-radius($border-radius);
     }
-  }
+  }*/
 
-  &.active .page-link {
+  &.active .page-link {                     /*changed all values*/
+    
     z-index: 2;
-    color: $pagination-active-color;
-    background-color: $pagination-active-bg;
-    border-color: $pagination-active-border;
+    //color: $pagination-active-color;
+    color: #FFFFFF;
+    //background-color: $pagination-active-bg;
+    background-color: $YuktaBlue;
+    //border-color: $pagination-active-border;
+    border-color: $ExtraDarkSnow;
   }
 
   &.disabled .page-link {
@@ -44,12 +48,19 @@
   color: $pagination-color;
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
+  font-family: $f-f-S-S-Pro;
+  text-decoration: none;                                                  /*added 3 lines*/
+  font-size: 0.75rem;
+  color: $YuktaBlue;
 
-  @include hover-focus {
-    color: $pagination-hover-color;
+  @include hover-focus {                          /*changed all values*/
+    //color: $pagination-hover-color;
+    color: $YuktaBlue;
     text-decoration: none;
-    background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border;
+    //background-color: $pagination-hover-bg;
+    background-color: $DarkSnow;
+    //border-color: $pagination-hover-border;
+    border-color: $ExtraDarkSnow;
   }
 }
 
@@ -64,4 +75,12 @@
 
 .pagination-sm {
   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+}
+
+@media screen and (max-width: 360px) {                /*added 1 new function*/  /*for responsiveness*/
+    .pagination {
+        .page-link {
+          padding: $pagination-padding-y;             /**/
+        }
+    }
 }

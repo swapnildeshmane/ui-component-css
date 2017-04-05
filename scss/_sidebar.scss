@@ -1,0 +1,176 @@
+.yk-sidebar {
+  height: 100vh;
+  width: 3rem;
+  display: block;
+  overflow: hidden;
+  overflow-y: auto;
+  //position: fixed;
+  padding: 0.3125rem;
+  background-color: #dfe5ec;
+  font-family: Source sans pro;
+}
+.yk-sidebar.expanded-menu {
+  width: 11rem;
+  padding: 0.875rem;
+}
+.yk-sidebar.expanded-menu .app-info-details {
+  text-align: left;
+}
+.yk-sidebar.expanded-menu .app-info-details .brand-logo {
+  display: inline-block;
+}
+.yk-sidebar.expanded-menu .user-details .user-name,
+.yk-sidebar.expanded-menu .user-details .user-role {
+  display: block;
+}
+.yk-sidebar.expanded-menu .yk-navigation .heading-text {
+  text-align: left;
+}
+.yk-sidebar.expanded-menu .yk-navigation .heading-text .heading-text-label {
+  display: inline-block;
+}
+.yk-sidebar.expanded-menu .yk-navigation .app-menu-item {
+  text-align: left;
+}
+.yk-sidebar.expanded-menu .yk-navigation .app-menu-item .menu-link .link-text {
+  display: inline-block;
+}
+.yk-sidebar.expanded-menu .yk-navigation .user-info {
+  width: 9.25rem;
+}
+.yk-sidebar.expanded-menu + .yk-app-container {
+  width: 88%;
+  left: 10.25rem;
+}
+.yk-sidebar .app-info-details {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.yk-sidebar .app-info-details .sidebar-toggler {
+  display: inline-block;
+  line-height: 2;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.yk-sidebar .app-info-details .sidebar-toggler > .icon-list {
+  cursor: pointer;
+}
+.yk-sidebar .app-info-details .brand-logo {
+  display: none;
+  width: 6.25rem;
+  margin-left: 0.625rem;
+  vertical-align: middle;
+	background-color: #fff;
+ }
+.yk-sidebar .app-info-details .brand-logo > img {
+  width: 100%;
+  height: 2rem
+}
+.yk-sidebar .user-details {
+  display: inline-block;
+  width: 100%;
+  height: 4.7rem;
+  margin: 0.625rem 0;
+}
+.yk-sidebar .user-details .user-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: auto;
+}
+.yk-sidebar .user-details .user-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+.yk-sidebar .user-details .user-name,
+.yk-sidebar .user-details .user-role {
+  color: #5f6978;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  word-break: break-word;
+  margin-top: 0.3125rem;
+  display: none;
+}
+.yk-sidebar .user-details .user-role {
+  font-weight: 400;
+  color: #8d9bad;
+}
+#main-app .yk-sidebar.expanded-menu .app-info-details {
+  margin: -20px 0px 0px -15px;
+  padding: 15px 0 10px 15px;
+  width: 11rem;
+}
+#main-app .yk-sidebar .app-info-details {
+  background: #dd3238;
+  margin: -20px 0px 0px -15px;
+  padding: 24px 0 10px 0.3125rem;
+  width: 3.6250rem;
+  color: #fff;
+}
+.yk-navigation .heading-text {
+  display: block;
+  margin: 1rem 0 0.188rem;
+  text-align: center;
+}
+.yk-navigation .heading-text .heading-text-icon {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  vertical-align: middle;
+}
+.yk-navigation .heading-text .heading-text-label {
+  display: none;
+  margin-left: 0.625rem;
+  font-size: 0.625rem;
+  color: #8391a5;
+  line-height: 1;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.yk-navigation .app-menu-item {
+  padding: 0.25rem 0.9375rem;
+  margin: 0 -0.9375rem;
+  text-align: center;
+  width: 11rem;
+}
+.app-menu-item>a {
+  font-size: 0.75rem;
+}
+.yk-navigation .app-menu-item .menu-link {
+  text-decoration: none;
+  color: #4c5867;
+}
+.yk-navigation .app-menu-item .menu-link > i {
+  display: inline-block;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  line-height: 1.2rem;
+}
+.yk-navigation .app-menu-item .menu-link .link-text {
+  display: none;
+  margin-left: 0.625rem;
+  vertical-align: middle;
+  line-height: 1.2rem;
+}
+.yk-navigation .app-menu-item.active,
+.yk-navigation .app-menu-item:hover {
+  background: #f8f9fb;
+}
+.yk-navigation .app-menu-item.active .menu-link,
+.yk-navigation .app-menu-item:hover .menu-link {
+  color: #44c2fc;
+}
+.yk-navigation .user-info {
+  position: absolute;
+  top: 80%;
+  width: 2.4rem;
+}
+
+@media screen and (max-height: 375px) {
+  .yk-navigation .user-info {
+    position: static;
+  }
+}

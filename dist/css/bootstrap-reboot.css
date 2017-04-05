@@ -1,3 +1,29 @@
+/*change end*/
+/**/
+/*sans-serif;*/
+/**/
+/*added 1 line, font Xtra Small */
+/*extra small for dropdown purpose*/
+/*New created 1 line*/
+/*change 2 lines*/
+/*change 3 line*/
+/*
+$btn-padding-x-sm:               .5rem !default;
+$btn-padding-y-sm:               .25rem !default;
+*/
+/*$btn-padding-x-lg:               1.5rem !default;
+$btn-padding-y-lg:               .75rem !default;
+*/
+/*add new line 1*/
+/*new added 1 line*/
+/*added 2 line*/
+/*added new var, for white background*/
+/*added 1 line*/
+/*
+$sidebar-min- ... = sidebar minimized
+$sidebar-exp- ... = sidebar expanded
+$sidebar- ... = to both (minimized and expanded)
+*/
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22,8 +48,8 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.5;
   color: #292b2c;
@@ -121,18 +147,6 @@ sup {
   top: -.5em;
 }
 
-a {
-  color: #0275d8;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
-a:hover {
-  color: #014c8c;
-  text-decoration: underline;
-}
-
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -219,7 +233,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: "Source Sans Pro";
   font-size: inherit;
   line-height: inherit;
 }

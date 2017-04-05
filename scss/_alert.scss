@@ -4,8 +4,13 @@
 
 .alert {
   padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $alert-margin-bottom;
+  //margin-bottom: $alert-margin-bottom;                    /*changed 1 line*/
+  margin: $alert-margin-y $alert-margin-x;
   border: $alert-border-width solid transparent;
+  font-size: $alert-font-size;                              /*added 1 line*/
+  font-family: $f-f-S-S-Pro;
+  clear: both;
+  float: left;
   @include border-radius($alert-border-radius);
 }
 

@@ -71,18 +71,34 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {% endexample %}
 
 
-## Sizes
+## Large Buttons
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {% example html %}
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<button type="button" class="btn btn-primary btn-lg">Prim button</button>
+<button type="button" class="btn btn-secondary btn-lg">Secnd button</button>
+<button type="button" class="btn btn-secondary-silver btn-lg">Silver button</button>
+
 {% endexample %}
 
+## With Logos
+
+Buttons with Logos of "settings" (cog) and dropdown (Carot).
+
 {% example html %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-lg btn-largestandardbtnicon"><i class="fa fa-cog left"></i>   Settings</button>
+<button type="button" class="btn btn-lg btn-largesplitbtn"> Drop D   <span class="fa fa-caret-down"></span></button>
+
+{% endexample %}
+
+## Small buttons
+
+{% example html %}
+<button type="button" class="btn btn-primary btn-sm">Prim button</button>
+<button type="button" class="btn btn-secondary btn-sm">Sec button</button>
+<button type="button" class="btn btn-secondary-silver btn-sm">Silver button</button>
+
 {% endexample %}
 
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
